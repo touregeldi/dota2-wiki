@@ -1,0 +1,14 @@
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.headername {
+  text-align: center;
+}
+
+.strength {
+  text-align: center;
+}
