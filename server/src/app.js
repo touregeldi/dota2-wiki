@@ -5,8 +5,8 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 9000;
 
-app.use(express.static(path.join(process.cwd()), 'client/build'));
-
+app.use(express.static(path.join(process.cwd(), 'client/build')));
+console.log(path.join(process.cwd(),'client/build'))
 
 app.get("/api", (req,res)=>{
     heroReq((error, heroes)=>{
@@ -21,10 +21,9 @@ app.get("/api", (req,res)=>{
 })
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(path.dirname(process.cwd()), 'client/build/index.html'));
+    res.sendFile(path.join(process.cwd()+'/client/build/index.html'));
   });
   
-
 app.listen(port, () => {
     console.log("Server is up on port " + port);
   });
