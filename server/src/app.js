@@ -23,6 +23,7 @@ app.get("/api", (req,res)=>{
 app.get('*', (req, res) => {
     res.sendFile(path.join(path.dirname(process.cwd()), 'client/build/index.html'));
   });
+
   
 
 app.listen(port, () => {
